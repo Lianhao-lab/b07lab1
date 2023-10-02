@@ -28,7 +28,7 @@ public class Polynomial {
 		this.coefficients = new double[len];
 		this.exponents = new int[len];
 		for(int i = 0; i<len; i++) {
-			if(array[i].length()>1) {
+			if(array[i].indexOf('x')!=-1) {
 				int location = array[i].indexOf('x');
 				this.coefficients[i] = Double.parseDouble(array[i].substring(0,location));
 				this.exponents[i] = Integer.parseInt(array[i].substring(location+1));
